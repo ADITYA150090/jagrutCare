@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #021324;
+    padding: 1rem 2rem;
+    color: white;
+    position: relative;
+    height: 15vh;
+}
+
+.navbar-brand .logo {
+    color: rgb(0, 255, 64);
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 2rem;
+    border: 0px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #ccc;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #007bff;
+        width: 100%;
+        text-align: center;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    .navbar-links li {
+        margin: 1rem 0;
+    }
+    .navbar-links a {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* Adding animation to the hamburger menu icon */
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}

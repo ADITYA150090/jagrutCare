@@ -1,0 +1,59 @@
+/* App.css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: #1ebd46;
+    width: 100vw;
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+input {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: white;
+    color: black;
+}
+
+button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+.service {
+    background-color: black;
+}
